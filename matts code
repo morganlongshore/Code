@@ -1,0 +1,25 @@
+int num = 60;//int 
+float mx[] = new float[num];//Declares a variable so it can be used later on 
+float my[] = new float[num];//Declares a variable so it can be used later on 
+
+void setup() { 
+  size(640, 360);//sets the size of the browzer window.
+  noStroke();//noStroke sets weather or not there is an outline
+  fill(255, 153); //Fill sets the color of the objects
+}
+
+void draw() {
+  background(51); //This is the color of the background
+  
+  // Cycle through the array, using a different entry on each frame. 
+  // Using modulo (%) like this is faster than moving all the values over.
+  int which = frameCount % num;
+  mx[which] = mouseX;//Sets the X cordinent 
+  my[which] = mouseY;//Sets the Y cordinent 
+  
+  for (int i = 0; i < num; i++) { 
+    // which+1 is the smallest (the oldest in the array)
+    int index = (which+1 + i) % num;
+    ellipse(mx[index], my[index], i, i);//Draws a circle on the screen where the mouse it at.
+  }
+}
