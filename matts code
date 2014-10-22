@@ -4,7 +4,7 @@ float my[] = new float[num];//Declares a variable so it can be used later on
 
 void setup() { 
   size(640, 360);//sets the size of the browzer window.
-  noStroke();//noStroke sets weather or not there is an outline
+  noStroke();//noStroke sets weather or not there is an line around the outside of the circle
   fill(255, 153); //Fill sets the color of the objects
 }
 
